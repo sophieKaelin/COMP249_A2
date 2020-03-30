@@ -1,0 +1,26 @@
+% rebase('base.html')
+        
+<h1>Current Shopping Cart contents</h1>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        % for product in contents:
+
+            <tr>
+                <td><a href="/product/{{!products['id']}}">{{product['name']}}</a></td>
+                <td>{{products['quantity']}}</td>
+                <!--<td>${{products['cost']}} * {{products['quantity']}}</td>-->
+            </tr>
+        % end
+        <tr>
+            <!--<td>Total</td><td></td><td>{{total_cost_Calculation}}</td>\-->
+        </tr>
+    </table>
+</div>
